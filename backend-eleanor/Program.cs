@@ -1,2 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Microsoft.Extensions.Hosting;
+using static Infra.DependencyInjection.InfrastructureServiceCollectionExtensions;
+
+var builder = Host.CreateApplicationBuilder();
+builder.Services.AdicionarContext(builder.Configuration);
