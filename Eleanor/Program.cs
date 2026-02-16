@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using static Infra.DependencyInjection.InfrastructureServiceCollectionExtensions;
 
 var builder = Host.CreateApplicationBuilder();
-builder.Services.AdicionarContext(builder.Configuration);
+builder.Services.AdicionarContext();
 builder.Services.AddInterfaceServices();
 builder.Build();
 
